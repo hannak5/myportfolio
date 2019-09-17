@@ -1,0 +1,287 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "hero"
+    "process"
+}
+
+.navbar, .hero, .process{
+
+}
+
+.navbar{
+  grid-area: navbar;
+}
+
+/*font specs*/
+
+p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: 300;
+  letter-spacing: .1rem;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 2;
+}
+
+h2 {
+  font-size: 10rem;
+  color: #9B6E9A;
+  font-weight: bold;
+}
+
+h5{
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: .5rem;
+  font-size: 3.6rem;
+}
+
+h6{
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .1rem;
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+}
+
+
+.container{
+    background-color: white;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: Roboto, sans-serif;
+    font-size: 2.4rem;
+    height: auto;
+    width: 100%;
+    padding: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+
+.logo img{
+      justify-content: left;
+      height: 60px;
+      width: 60px;
+    }
+
+li.about, li.logo, li.work, li.resume{
+      justify-content: flex-end;
+      display: flex;
+      text-align: center;
+      font-size: 1.6rem;
+      flex-grow: 1;
+      min-width: 10rem;
+}
+
+
+li.logo {
+      flex-grow:40;
+      justify-content: left;
+}
+
+
+.navbar{
+  width: 100%;
+}
+
+
+section {
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: Roboto, sans-serif;
+  font-size: 2.4rem;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.herotop{
+  height: 6.5rem;
+  padding-top:2rem;
+  padding-left:4rem;
+  justify-content: left;
+}
+
+.herobottom{
+  background-color: #9B6E9A;
+  color:white;
+  height:auto;
+  padding-top:14rem;
+  padding-left:20%;
+  padding-right:20%;
+  padding-bottom: 0px;
+  justify-content: center;
+  line-height: 5rem;
+  font-family: Roboto, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: .1rem;
+}
+
+.arrow img{
+  padding-top: 45px;
+  padding-bottom: 10px;
+}
+
+ul{
+  margin: auto 0;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.stoMain{
+  padding-top: 15rem;
+}
+
+.stoMain img{
+  width: 50rem;
+  height: auto;
+}
+
+.stoLogo img{
+  margin: 3rem;
+  height: 6rem;
+  width: auto;
+}
+
+.stoTitle {
+  height: 100px;
+  justify-content: center;
+  align-items:center;
+  align-content: center;
+  text-align: center;
+  font-weight: 300;
+  font-size: 5rem;
+  padding-left:20%;
+  padding-right:20%;
+  padding-bottom: 0px;
+}
+
+.stoContent{
+  padding-bottom:50px;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+
+.yellowtext{
+  font-weight: 500;
+  font-size: 9rem;
+  color: #9B6E9A;
+  text-align: left;
+}
+
+.viewcasestudy{
+  padding: 8rem;
+  padding-top:.0rem;
+}
+
+button {
+  background-color: rgba(254, 209, 128, 60%);
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 24px;
+  font-stretch: expanded;
+  font-family: 'PT Sans', sans-serif;
+  width: 240px;
+}
+
+.hero {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 10rem;
+}
+
+
+.slogan {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-weight: lighter;
+  font-size: 30rem;
+}
+
+
+.footerbox{
+  background-color: rgba(89,14,86,40%);
+  padding: 8rem;
+  height: 328px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  width:100%;
+}
+
+
+.footcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  font-family: Roboto, sans-serif;
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.social{
+  padding: 10px;
+  justify-content: center;
+}
+
+li.mail, li.github, li.linkedin{
+      padding:5px;
+      display: flex;
+      min-width: 1.6rem;
+      width: auto;
+      height: 50px;
+}
+
+
+.texttop .textbelow{
+  justify-content: center;
+  text-align: center;
+}
