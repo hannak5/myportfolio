@@ -149,7 +149,7 @@ button {
 li.about, li.logo, li.work, li.resume{
   display: flex;
   flex-grow: 1;
-  font-size: 1.6rem;
+  font-weight: 300;
   justify-content: flex-end;
   min-width: 10rem;
   text-align: center;

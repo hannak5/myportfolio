@@ -9,19 +9,6 @@ html{
 body {
   background-color: white;
   width: 100%;
-  display: grid;
-  grid-template-areas:
-    "navbar"
-    "hero"
-    "process"
-}
-
-.navbar, .hero, .process{
-
-}
-
-.navbar{
-  grid-area: navbar;
 }
 
 /*font specs*/
@@ -63,8 +50,23 @@ h6{
     background-color: white;
     margin: 0 auto;
     overflow: hidden;
+    width: 100%;
   }
 
+  section {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+/*navbar specs*/
 
 .flex-container{
     display: flex;
@@ -102,27 +104,6 @@ li.logo {
 }
 
 
-.navbar{
-  width: 100%;
-}
-
-
-section {
-  margin: auto;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  font-family: Roboto, sans-serif;
-  font-size: 2.4rem;
-  height: auto;
-  width: 100%;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .herotop{
   height: 6.5rem;
@@ -135,13 +116,13 @@ section {
   background-color: #9B6E9A;
   color:white;
   height:auto;
-  padding-top:14rem;
+  padding-top:10%;
   padding-left:20%;
   padding-right:20%;
   padding-bottom: 0px;
   justify-content: center;
   line-height: 5rem;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: .1rem;
@@ -152,22 +133,8 @@ section {
   padding-bottom: 10px;
 }
 
-ul{
-  margin: auto 0;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  font-family: Roboto, sans-serif;
-  height: auto;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.stoMain{
-  padding-top: 15rem;
+.recent{
+  padding: 8rem 8rem;
 }
 
 .stoMain img{
@@ -175,33 +142,25 @@ ul{
   height: auto;
 }
 
-.stoLogo img{
-  margin: 3rem;
-  height: 6rem;
-  width: auto;
-}
-
 .stoTitle {
-  height: 100px;
+  height: auto;
   justify-content: center;
   align-items:center;
   align-content: center;
   text-align: center;
   font-weight: 300;
   font-size: 5rem;
-  padding-left:20%;
-  padding-right:20%;
-  padding-bottom: 0px;
+  padding:2rem;
 }
 
 .stoContent{
   padding-bottom:50px;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 
-.yellowtext{
+.herotext{
   font-weight: 500;
   font-size: 9rem;
   color: #9B6E9A;
@@ -216,38 +175,23 @@ ul{
 button {
   background-color: rgba(254, 209, 128, 60%);
   border: none;
+  border-radius: 24px;
   color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: 24px;
-  font-stretch: expanded;
+  letter-spacing: .15rem;
   font-family: 'PT Sans', sans-serif;
+  padding: 1.5rem 3.2rem;
+  text-align: center;
+  text-decoration: none;
   width: 240px;
 }
 
-.hero {
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  padding: 10rem;
-}
-
-
-.slogan {
-  color: hsla(0, 0%, 100%, 0.7);
-  font-weight: lighter;
-  font-size: 30rem;
-}
-
-
 .footerbox{
   background-color: rgba(89,14,86,40%);
-  padding: 8rem;
-  height: 328px;
+  padding: 4rem 8rem;
+  padding-bottom: 2rem;
+  height: auto;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -255,13 +199,12 @@ button {
   width:100%;
 }
 
-
 .footcontainer{
   display: flex;
   flex-wrap: wrap;
   flex-direction:row;
   font-family: Roboto, sans-serif;
-  height: 40px;
+  height: auto;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -280,8 +223,143 @@ li.mail, li.github, li.linkedin{
       height: 50px;
 }
 
+.footer{
+  letter-spacing: .2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.connect {
+  letter-spacing: .5rem;
+  font-size: 3.6rem;
+  line-height: 4rem;
+  font-weight: 400;
+}
 
 .texttop .textbelow{
+
   justify-content: center;
   text-align: center;
+}
+
+
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+
+  ul{
+      display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*navbar*/
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+  }
+
+  li.about, li.work, li.resume{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li.logo {
+    width: 100%;
+    padding-bottom: 3rem;
+    justify-content: center;
+  }
+
+  /*Hero section*/
+
+  .herotop{
+    height: 10.35rem;
+    padding-top:3rem;
+  }
+
+  .herobottom{
+    height: auto;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    padding: 4rem;
+  }
+
+  .herotext{
+    font-size: 5rem;
+    text-align: left;
+    color: #9B6E9A;
+    padding:0 3rem;
+    padding-bottom: 0rem;
+  }
+
+  .arrow img{
+    padding:0;
+    padding-bottom: 10px;
+  }
+
+  .stoMain img{
+    justify-content: center;
+    width:300px;
+    height:auto;
+  }
+
+  .stoLogo img{
+    justify-content: center;
+    height: 4rem;
+    width: auto;
+  }
+
+  .stoTitle {
+    justify-content: center;
+    height: auto;
+    font-weight: 300;
+    font-size: 3rem;
+    padding: 2rem 4rem;
+  }
+
+  .stoContent{
+    justify-content: center;
+    padding: 2rem 5rem;
+    padding-top: 0;
+  }
+
+  .viewcasestudy{
+    padding: 8rem;
+    padding-top:2rem;
+  }
+
+  button {
+    font-size: 1.4rem;
+  }
+
+  .connect{
+    letter-spacing: 0rem;
+    font-size: 3rem;
+  }
+
+  .footerbox{
+    padding: 4rem;
+    height: auto;
+  }
+
+
+  .footcontainer{
+    display: flex;
+  }
+
+  .textbelow {
+    padding: 0 3rem;
+  }
+
 }
