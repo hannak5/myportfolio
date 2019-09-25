@@ -211,11 +211,15 @@ section {
   height: auto;
 }
 
-ul{
-  align-items: center;
+
+.sto{
+  overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  overflow:auto;
+  width: 100%;
+  align-items: center;
 }
 
 .stoMain, .stoLogo, .stoTitle, .stoContent{
@@ -889,11 +893,6 @@ li.mail, li.github, li.linkedin{
 
   .div{
     padding: 0px;
-    justify-content: center;
-  }
-
-  .intro{
-    padding:2rem 0;
     justify-content: center;
   }
 
