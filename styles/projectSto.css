@@ -526,17 +526,17 @@ li.next {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: auto;
-  width: 100%;
-  padding:5rem 0;
-  justify-content:space-around;
+  justify-content:center;
+  padding: 5rem 0;
 }
 
 .newfile1 img, .newfile2 img, .newfile3 img, .newfile4 img{
   display: flex;
   flex-grow: 1;
-  height:30rem;
+  flex-direction: row;
+  height: 35rem;
   width: auto;
+  padding:0 1rem;
 }
 
 .brandingimg{
@@ -676,12 +676,12 @@ li.next {
   align-items: center;
   align-content: center;
   justify-content: center;
-  padding: 5rem 0;
 }
 
 .threephone img{
   height: 45rem;
   width: auto;
+  padding: 5rem 2rem;
 }
 
 /*high fidelity prototyping*/
@@ -704,10 +704,17 @@ li.next {
   align-items: center;
   display: flex;
   height: 45rem;
-  justify-content: center;
-  padding: 10px 20px;
+  justify-content: space-between;
+  padding: 0px 10px;
   width: auto;
 }
+
+#secondframe{
+  height:auto;
+  width:auto;
+  overflow:auto;
+}
+
 
 /*footer section of the page*/
 
@@ -751,10 +758,18 @@ li.mail, li.github, li.linkedin{
   text-align: center;
 }
 
+#firstframe{
+  height: auto;
+  width: auto;
+  overflow:auto;
+}
+
 
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
+
+  .element::-webkit-scrollbar { width: 0 !important }
 
   p{
     font-family: 'Roboto', sans-serif;
@@ -1122,130 +1137,153 @@ li.mail, li.github, li.linkedin{
   .createnewfile{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     height: auto;
     width: 100%;
-    padding:5rem 0;
+    padding:2rem 0;
     justify-content:space-around;
   }
 
   .newfile1 img, .newfile2 img, .newfile3 img, .newfile4 img{
     display: flex;
-    flex-grow: 1;
-    height:30rem;
-    width: auto;
-  }
-
-  .brandingimg{
-    align-content: flex-start;
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-around;
-    padding-top:5rem;
-  }
-
-  /* color palette and text image*/
-
-  .palette {
-    width: 60%;
-    padding: 1rem 3rem;
-  }
-
-  .maintext{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-    justify-content: space-between;
-    padding: 10;
-    width:100%;
-  }
-
-  .roboto img{
-    padding:0;
-  }
-
-  .box{
-    justify-content:center;
-    align-items: center;
-    align-content: center;
-    width: 30%
-  }
-
-  .dot {
-    border-radius: 50%;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-  }
-
-  .logoimg{
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
-
-  .l1 img, .l2 img, .l3 img{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-    height: auto;
-    width: 100%;
-  }
-
-  .l2 img, .l3 img {
-    height: auto;
-    width: 30rem;
-  }
-
-  /*preference testing*/
-
-  .preference{
-    padding: 0;
-  }
-
-  .row1, .row2, .row3{
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;;
-  }
-
-  .img1a img, .img1b img, .img2a img, .img2b img{
     height: auto;
-    padding: 1rem 0;
-    width: 32rem;
+    width: 28rem;
   }
 
-  .img3a img, .img3b img{
-    width: 15rem;
-    height: auto;
-    padding: 1rem 0;
+.brandingimg{
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+
+/* color palette and text image*/
+
+.palette {
+  min-width: 30rem;
+  padding: 2rem 4rem;
+}
+
+.maintext{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: flex-start;
+  padding: 10px;
+  min-width:30rem;
+}
+
+.roboto img{
+    padding: 2rem 4rem;
+}
+
+.box{
+  justify-content:center;
+  align-items: center;
+  align-content: center;
+  width: 30%
+}
+
+.dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.logoimg{
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.l1 img, .l2 img, .l3 img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  height: auto;
+  width: 100%;
+}
+
+.l2 img, .l3 img {
+  height: auto;
+  width: 30rem;
+}
+
+/*preference testing*/
+
+.preference{
+  padding: 0;
+}
+
+.row1, .row2, .row3{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;;
+}
+
+.img1a img, .img1b img, .img2a img, .img2b img{
+  height: auto;
+  padding: 1rem 0;
+  width: 32rem;
+}
+
+.img3a img, .img3b img{
+  width: 15rem;
+  height: auto;
+  padding: 1rem 0;
+}
+
+.threephone img{
+  margin: 5px auto;
+}
+
+/*high fidelity prototyping*/
+
+.srow1, .srow2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.s1 img, .s2 img, .s3 img, .s4 img, .s5 img, .s6 img{
+  align-items: center;
+  height: 39rem;
+  padding: 0 2rem;
+  width: auto;
+}
+
+.srow1{
+  padding-right: 0px;
+}
+
+.srow2{
+  padding-left: 0px;
+}
+
+  #firstframe{
+    padding: 2rem;
+    height:600px;
+    width:600px;
+    overflow: scroll;
+    scroll-behavior:smooth;
+    overflow-y: hidden;
   }
 
-  .threephone img{
-    height: auto;
-    width: 30rem;
-  }
-
-  /*high fidelity prototyping*/
-
-  .srow1, .srow2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:0;
-  }
-
-  .s1 img, .s2 img, .s3 img, .s4 img, .s5 img, .s6 img{
-    align-items: center;
-    height: auto;
-    padding: 2rem 0;
-    width: 20rem;
+  #secondframe{
+    height:500px;
+    width:auto;
+    overflow:auto;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
   }
 
 
