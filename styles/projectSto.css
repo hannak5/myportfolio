@@ -31,10 +31,18 @@ section {
   text-align: center;
 }
 
+/*project purple = #590E56*/
 /*font specs*/
-a{
-  color: #590E56;
+a:link, a:visited{
+  color: black;
+  text-decoration: none;
 }
+
+a:hover{
+  color: #FED180;
+  text-decoration: none;
+}
+
 
 p{
   font-family: 'Roboto', sans-serif;
@@ -139,7 +147,7 @@ bodycopy{
   padding-bottom:8rem;
 }
 
-button {
+button{
   background-color: rgba(254, 209, 128, 60%);
   border: none;
   color: black;
@@ -151,6 +159,11 @@ button {
   font-family: 'PT Sans', sans-serif;
   width: 240px;
   letter-spacing: .2rem;
+}
+
+button a:hover{
+  color: #590E56;
+  text-decoration-color: white;
 }
 
 /*navbar container*/
