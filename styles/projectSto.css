@@ -32,8 +32,20 @@ section {
 }
 
 /*font specs*/
-a{
-  color: #590E56;
+a:link , a:active {
+  text-decoration: none;
+  color:black;
+}
+
+a:hover {
+  text-decoration: none;
+  text-decoration-color: red;
+  color:#9B6E9A;
+}
+
+a:visited{
+  text-decoration: none;
+  color:black;
 }
 
 p{
@@ -156,37 +168,40 @@ button {
 /*navbar container*/
 
 .flex-container{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  font-family: Roboto, sans-serif;
-  font-size: 2.4rem;
-  height: auto;
-  width: 100%;
-  padding: 5rem;
-  justify-content: space-between;
-  align-items: center;
-}
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: Roboto, sans-serif;
+    font-size: 2.4rem;
+    height: auto;
+    width: 100%;
+    padding: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    }
 
-.logo img{
-  justify-content: left;
-  height: 60px;
-  width: 60px;
-}
 
-li.about, li.logo, li.work, li.resume{
-  justify-content: flex-end;
-  display: flex;
-  text-align: center;
-  font-size: 1.6rem;
-  flex-grow: 1;
-  min-width: 10rem;
-}
+    .logo img{
+          justify-content: left;
+          height: 60px;
+          width: 60px;
+        }
 
-li.logo {
-  flex-grow:40;
-  justify-content: left;
-}
+    li.about, li.logo, li.work, li.resume{
+          justify-content: flex-end;
+          display: flex;
+          text-align: center;
+          font-size: 1.6rem;
+          flex-grow: 1;
+          min-width: 10rem;
+    }
+
+
+    li.logo {
+          flex-grow:40;
+          justify-content: left;
+    }
+
 
 section {
   margin: auto;
@@ -230,6 +245,10 @@ section {
   text-align: center;
 }
 
+.stoMain img{
+  padding:5% 0 0 0;
+}
+
 .stoTitle {
   padding: 3% 0;
   font-weight: 300;
@@ -244,14 +263,16 @@ section {
 }
 
 .delv-container{
-  justify-content: space-between;
+  justify-content: space-around;
   text-align:center;
-  padding: 6rem 0;
+  padding: 0;
 }
 
 .design, .delv, .tools{
   min-width: 19rem;
+  padding: 0 3rem;
 }
+
 /*problem solution section*/
 
 .problemsolution{
@@ -832,6 +853,11 @@ li.mail, li.github, li.linkedin{
     line-height: 150%;
   }
 
+  .maincontent{
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
   /*navbar*/
   .flex-container{
     display: flex;
@@ -897,13 +923,9 @@ li.mail, li.github, li.linkedin{
   }
 
   .stoMain img{
+    padding: 10% 0;
     width:100%;
     height:auto;
-  }
-
-  .stocontent1{
-    font-size: 1.8rem;
-    line-height: 3rem;
   }
 
   .stoTitle{
@@ -950,7 +972,7 @@ li.mail, li.github, li.linkedin{
   .design, .deliv , .tools{
     display:flex;
     flex-direction: column;
-    padding:2rem 0;
+    padding: 2rem 2rem;
   }
 
   /*problem solution section*/
