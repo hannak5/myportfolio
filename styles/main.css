@@ -11,19 +11,51 @@ body {
   width: 100%;
 }
 
+
+.container{
+  background-color: white;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+section {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*project purple = #590E56*/
 /*font specs*/
+
+
+a:link, a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #FED180;
+  text-decoration: none;
+}
 
 p{
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   line-height: 2;
-  font-weight: 300;
-  letter-spacing: .1rem;
+  font-weight: 300;/* 400 for project.html*/
 }
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: 2;
+  letter-spacing: 2; /*not there in project.html*/
 }
 
 h2 {
@@ -45,36 +77,114 @@ h6{
   font-size: 1.6rem;
 }
 
+b{
+  font-weight: bolder;
+}
 
-.container{
-    background-color: white;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
-  }
+.title{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4rem;
+  font-weight: 350;
+  letter-spacing: .1rem;
+  line-height: 2;
+  padding-bottom: 4rem;
+  padding-top: 6rem;
+}
 
-  section {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-  }
+.maincontent{
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
 
-  a:link, a:visited{
-    color: black;
-    text-decoration: none;
-  }
 
-  a:hover{
-    color: #FED180;
-    text-decoration: none;
-  }
+/*subtitle text*/
+.subtitle{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  font-weight: 300;
+}
+
+/*body copy big*/
+.bodycopy{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.smalltitle{
+  padding:5rem 0;
+}
+
+.captions{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  line-height: 200%;
+}
+
+/*all the flex containers common element. 800px for desktop version*/
+.content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  text-align:left;
+  width: 800px;
+}
+
+/*container that is width 100%*/
+.contentfull {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  text-align:left;
+  width:100%;
+}
+
+/*button specifications*/
+
+.aroundbutton{
+  padding-top: 5rem;
+  padding-bottom:8rem;
+}
+
+button {
+  all: unset;
+}
+
+button a:link, a:visited{
+  background-color: rgba(254, 209, 128, 60%);
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 24px;
+  font-family: 'PT Sans', sans-serif;
+  width: 240px;
+  letter-spacing: .2rem;
+}
+
+button a:hover{
+  background-color: #590E56;
+  border: none;
+  color: #FED180;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 24px;
+  font-family: 'PT Sans', sans-serif;
+  width: 240px;
+  letter-spacing: .2rem;
+}
 
 /*navbar specs*/
 
@@ -82,11 +192,11 @@ h6{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2.4rem;
     height: auto;
     width: 100%;
-    padding: 5rem;
+    padding: 3rem;
     justify-content: space-between;
     align-items: center;
     }
@@ -104,22 +214,40 @@ li.about, li.logo, li.work, li.resume{
       text-align: center;
       font-size: 1.6rem;
       flex-grow: 1;
-      min-width: 10rem;
+      min-width: 7rem;
+      padding: 2%;
 }
 
+.flex-container a:hover{
+  text-decoration: underline;
+  text-decoration-color: black;
+}
 
 li.logo {
       flex-grow:40;
       justify-content: left;
 }
 
+/*end of navbar specs*/
 
-
+/* hero section */
 .herotop{
   height: 6.5rem;
   padding-top:2rem;
   padding-left:4rem;
   justify-content: left;
+}
+
+.herotext{
+  font-weight: 500;
+  font-size: 9rem;
+  color: #9B6E9A;
+  text-align: left;
+}
+
+.yellow{
+  color: #FED150;
+  text-align: left;
 }
 
 .herobottom{
@@ -143,11 +271,18 @@ li.logo {
   padding-bottom: 10px;
 }
 
+/* end of hero section  */
+
+/* recent project work section */
 .recent{
-  padding: 8rem 8rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width:95%;
 }
 
 .stoMain img{
+  padding:10% 0 0 0;
   width: 50rem;
   height: auto;
 }
@@ -164,39 +299,22 @@ li.logo {
 }
 
 .stoContent{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   padding-bottom:50px;
   padding-left: 25%;
   padding-right: 25%;
 }
 
-
-.herotext{
-  font-weight: 500;
-  font-size: 9rem;
-  color: #9B6E9A;
-  text-align: left;
-}
-
 .viewcasestudy{
   padding: 8rem;
-  padding-top:.0rem;
+  padding-top:0
 }
 
-button {
-  background-color: rgba(254, 209, 128, 60%);
-  border: none;
-  border-radius: 24px;
-  color: black;
-  display: inline-block;
-  font-size: 16px;
-  letter-spacing: .15rem;
-  font-family: 'PT Sans', sans-serif;
-  padding: 1.5rem 3.2rem;
-  text-align: center;
-  text-decoration: none;
-  width: 240px;
-}
+/* end of recent project work section */
 
+/* footer section */
 .footerbox{
   background-color: rgba(89,14,86,40%);
   padding: 4rem 8rem;
@@ -234,7 +352,7 @@ li.mail, li.github, li.linkedin{
 }
 
 .footer{
-  letter-spacing: .2rem;
+  letter-spacing: normal;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 3rem;
@@ -248,61 +366,162 @@ li.mail, li.github, li.linkedin{
 }
 
 .texttop .textbelow{
-
   justify-content: center;
   text-align: center;
 }
 
+.textbelow{
+  font-weight: 100;
+}
+/* end of footer section */
 
+/*about me page*/
+.designer img{
+  position:relative;
+  width:100%;
+  height:55rem;
+  object-fit:cover;
+}
 
-/* On screens that are 992px or less, set the background color to blue */
+.aboutmepage{
+  position:absolute;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.aboutsummary{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* padding-top:55rem; */
+}
+
+.abouttitle{
+  font-size: 5rem;
+  font-family:'Josefin sans', sans-serif;
+  height: auto;
+  margin:auto;
+  padding: 4rem;
+  padding-top:8rem;
+}
+
+.aboutme{
+  justify-content: center;
+  text-align: center;
+}
+
+.seemywork{
+  margin: 5rem auto;
+}
+
+.quesbox, .ansbox{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width:100%;
+}
+
+.quesbox{
+  padding-top:5rem;
+}
+
+.ansbox {
+  padding:3rem 0;
+  padding-left: 3.5rem;
+}
+
+.ques{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3.5rem;
+  line-height: 3rem;
+}
+
+.ans{
+  font-size: 1.8rem;
+}
+
+.full{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.interest{
+  justify-content: center;
+  padding: 6rem;
+  padding-bottom:4rem;
+  font-size: 3.5rem;
+  letter-spacing: normal;
+  font-weight: 300;
+}
+
+.getintouch{
+  padding:10rem 8rem;
+  padding-top:0;
+}
+
 @media screen and (max-width: 992px) {
 
-  ul{
+
+    /*navbar*/
+    .flex-container{
+      width:100%;
       display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    font-family: Roboto, sans-serif;
-    justify-content: center;
-    align-items: center;
-  }
+      flex-wrap: wrap;
+      flex-direction: row;
+      overflow: hidden;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3rem;
+    }
 
-  /*navbar*/
-  .flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem;
-  }
+    li.about, li.work, li.resume{
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
 
-  li.about, li.work, li.resume{
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+    li.logo {
+      width: 100%;
+      padding-bottom: 3rem;
+      justify-content: center;
+    }
 
-  li.logo {
-    width: 100%;
-    padding-bottom: 3rem;
-    justify-content: center;
-  }
+    section {
+      margin: auto;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
 
   /*Hero section*/
 
   .herotop{
-    height: 10.35rem;
+    max-width:450px;
+    height:100px ;
     padding-top:3rem;
+    padding-left:10%;
   }
 
   .herobottom{
+    padding-top:4;
+    padding-left:10%;
+    padding-right:10%;
     height: auto;
     line-height: 3rem;
     font-size: 1.6rem;
     font-weight: 300;
-    letter-spacing: .2rem;
-    padding: 4rem;
   }
 
   .herotext{
@@ -345,8 +564,11 @@ li.mail, li.github, li.linkedin{
   }
 
   .viewcasestudy{
-    padding: 8rem;
-    padding-top:2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+    padding-bottom: 12rem;
   }
 
   button {
@@ -369,7 +591,121 @@ li.mail, li.github, li.linkedin{
   }
 
   .textbelow {
-    padding: 0 3rem;
+    padding: 0;
   }
+
+  .aboutmepage{
+    position:static;
+    background-color:white;
+  }
+
+  .designer img{
+    position:relative;
+    width:100%;
+    height:auto;
+    justify-content: center;
+  }
+
+/*about me page*/
+
+  .content {
+    width: 100%;
+    padding:0 10%;
+  }
+
+  .aboutsummary{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* padding-top:55rem; */
+  }
+
+  .abouttitle{
+    text-align: center;
+    width:100%;
+    font-size: 4rem;
+    line-height: 5rem;
+    padding: 10%;
+  }
+
+  .aboutme{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .seemywork{
+    margin: 5rem auto;
+  }
+
+  .quesbox, .ansbox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width:100%;
+  }
+
+  .quesbox{
+    padding-top:5rem;
+  }
+
+  .ansbox {
+    padding:3rem 0;
+    padding-left: 3.5rem;
+  }
+
+  .ques{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  /*body copy big*/
+  .bodycopy{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  .ans{
+    font-size: 1.8rem;
+  }
+
+  .full{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .interest{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding:4rem;
+    padding-bottom:4rem;
+    font-size: 3.5rem;
+    letter-spacing: normal;
+    font-weight: 300;
+    line-height: 4rem;
+  }
+
+  .getintouch{
+    padding:10rem 8rem;
+    padding-top:0;
+  }
+}
+
+@media screen and (max-width: 320px){
+.herotop{
+  font-size:45px;
+  height:10.3rem;
+  width:auto;
+  padding-left:0;
+}
 
 }
