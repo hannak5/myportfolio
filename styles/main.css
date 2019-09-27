@@ -360,6 +360,7 @@ li.logo {
 
 .social{
   padding: 10px;
+  padding-bottom:20px;
   justify-content: center;
 }
 
@@ -390,9 +391,6 @@ li.mail, li.github, li.linkedin{
   text-align: center;
 }
 
-.textbelow{
-  font-weight: 100;
-}
 /* end of footer section */
 
 /*about me page*/
