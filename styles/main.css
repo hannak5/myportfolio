@@ -11,19 +11,37 @@ body {
   width: 100%;
 }
 
+.container{
+  background-color: white;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+/*project purple = #590E56*/
 /*font specs*/
+
+
+a:link, a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #FED180;
+  text-decoration: none;
+}
 
 p{
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   line-height: 2;
-  font-weight: 300;
-  letter-spacing: .1rem;
+  font-weight: 300;/* 400 for project.html*/
 }
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: 2;
+  letter-spacing: 2; /*not there in project.html*/
 }
 
 h2 {
@@ -45,26 +63,139 @@ h6{
   font-size: 1.6rem;
 }
 
+b{
+  font-weight: bolder;
+}
 
-.container{
-    background-color: white;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
-  }
+.title{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4rem;
+  font-weight: 350;
+  letter-spacing: .1rem;
+  line-height: 2;
+  padding-bottom: 4rem;
+  padding-top: 6rem;
+}
 
-  section {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-  }
+.maincontent{
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+
+/*subtitle text*/
+.subtitle{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  font-weight: 300;
+}
+
+/*body copy big*/
+.bodycopy{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  letter-spacing: .1rem;
+}
+
+.smalltitle{
+  padding:5rem 0;
+}
+
+.captions{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: .2rem;/* 0.1rem in project page*/
+  line-height: 200%;/*150% in project page*/
+}
+
+/*all the flex containers common element. 800px for desktop version*/
+.content {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  text-align:left;
+  width: 800px;
+}
+
+.pcontent {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  text-align:left;
+  width: 800px;
+}
+
+/*container that is width 100%*/
+.contentfull {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  text-align:left;
+  width:100%;
+}
+
+section {
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*button specifications*/
+
+.aroundbutton{
+  padding-top: 5rem;
+  padding-bottom:8rem;
+}
+
+button {
+  all: unset;
+}
+
+button a:link, a:visited{
+  background-color: rgba(254, 209, 128, 60%);
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.6rem;
+  border-radius: 24px;
+  font-family: 'PT Sans', sans-serif;
+  width: 240px;
+  letter-spacing: .2rem;
+}
+
+button a:hover{
+  background-color: #590E56;
+  border: none;
+  color: #FED180;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 24px;
+  font-family: 'PT Sans', sans-serif;
+  width: 240px;
+  letter-spacing: .2rem;
+}
 
 /*navbar specs*/
 
@@ -72,11 +203,11 @@ h6{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2.4rem;
     height: auto;
     width: 100%;
-    padding: 5rem;
+    padding: 3rem;
     justify-content: space-between;
     align-items: center;
     }
@@ -94,32 +225,59 @@ li.about, li.logo, li.work, li.resume{
       text-align: center;
       font-size: 1.6rem;
       flex-grow: 1;
-      min-width: 10rem;
+      min-width: 7rem;
+      padding: 2%;
 }
 
+.flex-container a:hover{
+  color:#FED150;
+}
 
 li.logo {
       flex-grow:40;
       justify-content: left;
 }
 
+/*end of navbar specs*/
 
+/* hero section */
+
+.hero {
+    height:100vh;
+}
 
 .herotop{
   height: 6.5rem;
   padding-top:2rem;
-  padding-left:4rem;
+  padding-left:5rem;
   justify-content: left;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.herotext{
+  font-weight: 500;
+  font-size: 9rem;
+  color: #9B6E9A;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.yellow{
+  color: #FED150;
+  text-align: left;
+  position: relative;
+  z-index: 2;
 }
 
 .herobottom{
+  z-index: 0;
   background-color: #9B6E9A;
   color:white;
-  height:auto;
-  padding-top:10%;
+  padding:5% 0;
   padding-left:20%;
   padding-right:20%;
-  padding-bottom: 0px;
   justify-content: center;
   line-height: 5rem;
   font-family: 'Roboto', sans-serif;
@@ -133,11 +291,18 @@ li.logo {
   padding-bottom: 10px;
 }
 
+/* end of hero section  */
+
+/* recent project work section */
 .recent{
-  padding: 8rem 8rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width:95%;
 }
 
 .stoMain img{
+  padding:10% 0 0 0;
   width: 50rem;
   height: auto;
 }
@@ -154,39 +319,22 @@ li.logo {
 }
 
 .stoContent{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   padding-bottom:50px;
   padding-left: 25%;
   padding-right: 25%;
 }
 
-
-.herotext{
-  font-weight: 500;
-  font-size: 9rem;
-  color: #9B6E9A;
-  text-align: left;
-}
-
 .viewcasestudy{
   padding: 8rem;
-  padding-top:.0rem;
+  padding-top:0
 }
 
-button {
-  background-color: rgba(254, 209, 128, 60%);
-  border: none;
-  border-radius: 24px;
-  color: black;
-  display: inline-block;
-  font-size: 16px;
-  letter-spacing: .15rem;
-  font-family: 'PT Sans', sans-serif;
-  padding: 1.5rem 3.2rem;
-  text-align: center;
-  text-decoration: none;
-  width: 240px;
-}
+/* end of recent project work section */
 
+/* footer section */
 .footerbox{
   background-color: rgba(89,14,86,40%);
   padding: 4rem 8rem;
@@ -212,6 +360,7 @@ button {
 
 .social{
   padding: 10px;
+  padding-bottom:20px;
   justify-content: center;
 }
 
@@ -224,7 +373,7 @@ li.mail, li.github, li.linkedin{
 }
 
 .footer{
-  letter-spacing: .2rem;
+  letter-spacing: normal;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 3rem;
@@ -238,61 +387,690 @@ li.mail, li.github, li.linkedin{
 }
 
 .texttop .textbelow{
-
   justify-content: center;
   text-align: center;
 }
 
+/* end of footer section */
+
+/*about me page*/
+.designer img{
+  position:relative;
+  width:100%;
+  height:55rem;
+  object-fit:cover;
+}
+
+.aboutmepage{
+  position:absolute;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.aboutsummary{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* padding-top:55rem; */
+}
+
+.abouttitle{
+  font-size: 5rem;
+  font-family:'Josefin sans', sans-serif;
+  height: auto;
+  margin:auto;
+  padding: 4rem;
+  padding-top:8rem;
+}
+
+.aboutme{
+  justify-content: center;
+  text-align: center;
+}
+
+.seemywork{
+  margin: 5rem auto;
+}
+
+.quesbox, .ansbox{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width:100%;
+}
+
+.quesbox{
+  padding-top:5rem;
+}
+
+.ansbox {
+  padding:3rem 0;
+  padding-left: 3.5rem;
+}
+
+.ques{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3.5rem;
+  line-height: 3rem;
+}
+
+.ans{
+  font-size: 1.8rem;
+}
+
+.full{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.interest{
+  justify-content: center;
+  padding: 6rem;
+  padding-bottom:4rem;
+  font-size: 3.5rem;
+  letter-spacing: normal;
+  font-weight: 300;
+}
+
+.getintouch{
+  padding:10rem 8rem;
+  padding-top:0;
+}
+
+/* STO project page details */
+
+/*summary of project*/
+
+.intro{
+  align-items: center;
+  display: flex;
+  flex-direction: row
+  justify-content: space-between;
+  width:90%;
+  height: auto;
+}
 
 
-/* On screens that are 992px or less, set the background color to blue */
+.sto{
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow:auto;
+  width: 100%;
+  align-items: center;
+}
+
+.stoMainp, .stoLogop, .stoTitlep, .stoContentp{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stoTitlep {
+  padding: 3% 0;
+  font-weight: 300;
+  font-size: 5rem;
+}
+
+.stoContentp{
+  width:600px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+.delv-container{
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align:center;
+  padding: 6rem 0;
+}
+
+.design, .delv, .tools{
+  min-width: 19rem;
+}
+/*problem solution section*/
+
+.problemsolution{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left, .right{
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  justify-content: left;
+  text-align: left;
+  width: 60%;
+}
+
+.right img{
+  height: auto;
+  width: 19rem;
+}
+
+.prob{
+  padding-bottom: 4.5rem;
+}
+
+/*color background sections*/
+.colorbk{
+  background-color: rgba(205, 169, 160, 40%);
+  padding:5rem 0;
+}
+
+.current{
+  text-align: left;
+}
+
+/*screen width for images*/
+.content-img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100rem;
+}
+
+/* height for images in colored backgrounds*/
+.ninefive img, .ui img, .account img, .thumbsup img,
+.back img, .comp img, .hand img, .plus img{
+  height: 8rem;
+  padding: 5px;
+  width: auto;
+}
+
+.ui, .account, .thumbsup, .ninefive,
+.back, .comp, .hand, .plus{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 3rem;
+  align-items: center;
+}
+
+
+/* next and previous project bar*/
+
+.bottomnavbar{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 10rem 10rem;
+  width: 100%;
+}
+
+.bottomflexcontainer{
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.rightarrow img, .leftarrow img{
+  flex-grow: 1;
+  height: 2rem;
+  justify-content: space-around;
+  width: 2rem;
+}
+
+.rightarrow img, li.prev{
+  align-items:flex-start;
+  justify-content:flex-start;
+  text-align:left;
+}
+
+.leftarrow img, li.next{
+  align-items:flex-end;
+  justify-content: flex-end;
+  text-align:right;
+}
+
+li.prev, li.next, li.rightarrow, li.leftarrow{
+  color: #590E56;
+  display: flex;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+  padding: 1rem 2rem;
+}
+
+li.prev {
+  flex-grow:20;
+}
+
+li.next {
+  flex-grow:20;
+}
+
+
+/*persona seciton*/
+
+.persona-cont {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.personaboy, .personagirl, .bubbles{
+  padding:0 1rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.personaboy img, .personagirl img{
+  width: 24rem;
+  height: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.bubbles{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.box1 {
+  margin: 6px auto;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+.speechbubbleboy{
+  border: 4px solid #590E56;
+}
+
+.speechbubblegirl{
+  border: 4px solid #FED180;
+}
+
+/* speech bubble boy */
+
+.speechbubbleboy:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #590E56;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #590E56;
+  border-bottom: 10px solid transparent;
+  right: -21px;
+  top: 6px;
+}
+
+.speechbubbleboy:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid #fff;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid transparent;
+  right: -11px;
+  top: 10px;
+}
+
+
+/* speech bubble girl */
+
+.speechbubblegirl:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border: 1px solid #FED180;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #FED180;
+  border-top: 10px solid #FED180;
+  border-bottom: 10px solid transparent;
+  left: -21px;
+  top: 6px;
+}
+
+.speechbubblegirl:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid transparent;
+  border-right: 7px solid #fff;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid transparent;
+  left: -11px;
+  top: 10px;
+}
+
+/*competitive analysis section*/
+
+.comp-cont{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  padding:5%;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.google, .dropbox, .evernote{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*user flows section*/
+
+.userflows{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content:space-around;
+  padding: 5rem 10rem;
+  width: 90%;
+}
+
+.flow1 img, .flow2 img{
+  display: flex;
+  flex-grow: 1;
+  width: 40rem;
+}
+
+/*images of "creating new file" screens*/
+.createnewfile{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:center;
+  padding: 5rem 0;
+}
+
+.newfile1 img, .newfile2 img, .newfile3 img, .newfile4 img{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  height: 35rem;
+  width: auto;
+  padding:0 1rem;
+}
+
+.brandingimg{
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  padding-top:5rem;
+}
+
+/* color palette and text image*/
+
+.palette {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content:space-around;
+  width: 400px;
+}
+
+.maintext{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-between;
+  padding: 10px 0;
+  width:100%;
+}
+
+.roboto img{
+  padding:0 10px;
+}
+
+.box{
+  justify-content:center;
+  width: 28%;
+}
+
+.dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.c1{
+  background-color: #745AA6;
+}
+
+.c2{
+  background-color: #2F75B5;
+}
+
+.c3{
+  background-color:#1896BE;
+}
+
+.c4{
+  background-color:#4C5A5D;
+}
+
+.c5{
+  background-color:#BBC3C6;
+}
+
+.c6{
+  background-color:#F2F2F2;
+}
+
+.logoimg{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-between;
+  padding: 6rem 0;
+}
+
+.l1 img, .l2 img, .l3 img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding:0 20px;
+}
+
+/*preference testing*/
+
+.preference{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+.row1, .row2, .row3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img1a img, .img1b img{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: center;
+  padding: 10px 20px;
+  width: 600px;
+}
+
+.img2a img, .img2b img{
+  display: flex;
+  height: auto;
+  justify-content: center;
+  padding: 10px 20px;
+  width: 600px;
+}
+
+.img3a img, .img3b img{
+  display: flex;
+  height:100%;
+  justify-content: center;
+  padding: 10px 20px;
+  width: auto;
+}
+
+.threephone{
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.threephone img{
+  height: 45rem;
+  width: auto;
+  padding: 5rem 2rem;
+}
+
+/*high fidelity prototyping*/
+
+.prototype{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.srow1, .srow2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.s1 img, .s2 img, .s3 img, .s4 img, .s5 img, .s6 img{
+  align-items: center;
+  display: flex;
+  height: 45rem;
+  justify-content: space-between;
+  padding: 0px 10px;
+  width: auto;
+}
+
+#secondframe{
+  height:auto;
+  width:auto;
+  overflow:auto;
+}
+
+
+#firstframe{
+  height: auto;
+  width: auto;
+  overflow:auto;
+}
+
+
+
 @media screen and (max-width: 992px) {
 
-  ul{
+
+    /*navbar*/
+    .flex-container{
+      width:100%;
       display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    font-family: Roboto, sans-serif;
-    justify-content: center;
-    align-items: center;
-  }
+      flex-wrap: wrap;
+      flex-direction: row;
+      overflow: hidden;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3rem;
+    }
 
-  /*navbar*/
-  .flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem;
-  }
+    li.about, li.work, li.resume{
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
 
-  li.about, li.work, li.resume{
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+    li.logo {
+      width: 100%;
+      padding-bottom: 3rem;
+      justify-content: center;
+    }
 
-  li.logo {
-    width: 100%;
-    padding-bottom: 3rem;
-    justify-content: center;
-  }
+    section {
+      margin: auto;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
 
   /*Hero section*/
 
   .herotop{
-    height: 10.35rem;
+    max-width:450px;
+    height:100px ;
     padding-top:3rem;
+    padding-left:10%;
   }
 
   .herobottom{
-    height: auto;
+    padding-top:5%;
+    padding-left:10%;
+    padding-right:10%;
     line-height: 3rem;
     font-size: 1.6rem;
     font-weight: 300;
-    letter-spacing: .2rem;
-    padding: 4rem;
   }
 
   .herotext{
@@ -301,6 +1079,10 @@ li.mail, li.github, li.linkedin{
     color: #9B6E9A;
     padding:0 3rem;
     padding-bottom: 0rem;
+  }
+
+  .hero{
+    height:100vh;
   }
 
   .arrow img{
@@ -335,12 +1117,11 @@ li.mail, li.github, li.linkedin{
   }
 
   .viewcasestudy{
-    padding: 8rem;
-    padding-top:2rem;
-  }
-
-  button {
-    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+    padding-bottom: 12rem;
   }
 
   .connect{
@@ -353,13 +1134,424 @@ li.mail, li.github, li.linkedin{
     height: auto;
   }
 
-
   .footcontainer{
     display: flex;
   }
 
   .textbelow {
-    padding: 0 3rem;
+    padding: 0;
   }
+
+  .aboutmepage{
+    position:static;
+    background-color:white;
+  }
+
+  .designer img{
+    position:relative;
+    width:100%;
+    height:auto;
+    justify-content: center;
+  }
+
+/*about me page*/
+
+  .content {
+    width: 100%;
+    padding:0 10%;
+  }
+
+  .aboutsummary{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* padding-top:55rem; */
+  }
+
+  .abouttitle{
+    text-align: center;
+    width:100%;
+    font-size: 4rem;
+    line-height: 5rem;
+    padding: 10%;
+  }
+
+  .aboutme{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .seemywork{
+    margin: 5rem auto;
+  }
+
+  .quesbox, .ansbox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width:100%;
+  }
+
+  .quesbox{
+    padding-top:5rem;
+  }
+
+  .ansbox {
+    padding:3rem 0;
+    padding-left: 3.5rem;
+  }
+
+  .ques{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  /*body copy big*/
+  .bodycopy{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  .ans{
+    font-size: 1.8rem;
+  }
+
+  .full{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .interest{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding:4rem;
+    padding-bottom:4rem;
+    font-size: 3.5rem;
+    letter-spacing: normal;
+    font-weight: 300;
+    line-height: 4rem;
+  }
+
+  .getintouch{
+    padding:10rem 8rem;
+    padding-top:0;
+  }
+
+/* STO project page  */
+  .element::-webkit-scrollbar { width: 0 !important }
+
+
+  /*navbar*/
+
+  li.about, li.work, li.resume{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li.logo {
+    width: 100%;
+    padding-bottom: 3rem;
+    justify-content: center;
+  }
+
+    /*all the flex containers common element. 800px for desktop version*/
+  .content {
+    width: 80%;
+  }
+
+  /*container that is width 100%*/
+  .contentfull {
+    padding: 1rem;
+  }
+
+  .div{
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .stoMainp img{
+    width:100%;
+    height:auto;
+  }
+
+  .stoTitlep{
+    padding: 10% 0;
+    font-weight: 300;
+    font-size: 3.5rem;
+  }
+
+  .viewcasestudy{
+    padding: 8rem;
+    padding-top:2rem;
+  }
+
+  button a:link, a:visited{
+    font-size: 1.4rem;
+  }
+
+  button a:hover{
+    font-size: 1.4rem;
+  }
+
+  .delv-container{
+    padding-top: 0px;
+    text-align:center;
+  }
+
+  .design, .deliv , .tools{
+    display:flex;
+    flex-direction: column;
+    padding:2rem 0;
+  }
+
+  /*problem solution section*/
+
+  .problemsolution{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .left, .right, .prob,.soln{
+    display: flex;
+    flex-direction: column;
+    padding:2rem 0;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .prob{
+    padding-bottom: 4.5rem;
+  }
+
+  /*color background sections*/
+
+  /*screen width for images*/
+  .content-img{
+    flex-direction: column;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .ui, .account, .thumbsup, .ninefive,
+  .back, .comp, .hand, .plus{
+    flex-direction: column;
+  }
+
+  /* next and previous project bar*/
+
+  .bottomnavbar{
+    padding: 4rem;
+  }
+
+  li.prev, li.next, li.rightarrow, li.leftarrow{
+    padding: 1rem 2rem;
+  }
+
+  /*persona seciton*/
+
+  .persona-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personaboy, .personagirl, .bubbles{
+    padding:1rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personaboy img, .personagirl img{
+    width: 30rem;
+  }
+
+  .box1 {
+    margin: 0px auto;
+    width:21rem;
+    height: auto;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .speechbubbleboy,.speechbubblegirl{
+    margin: 4px auto;
+  }
+
+  /*competitive analysis section*/
+
+  .comp-cont{
+    padding: 4rem 0;
+  }
+
+  .google img, .dropbox img, .evernote img{
+    width: auto;
+    height: 6rem;
+  }
+
+  .google .dropbox , .evernote {
+    justify-content: center;
+  }
+
+  /*user flows section*/
+
+  .userflows{
+    padding:0;
+  }
+
+  .flow1 img, .flow2 img{
+    width: 33rem;
+    padding: 5rem 0;
+  }
+
+
+  /*images of "creating new file" screens*/
+  .createnewfile{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding:2rem 0;
+    justify-content:space-around;
+  }
+
+  .newfile1 img, .newfile2 img, .newfile3 img, .newfile4 img{
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    width: 28rem;
+  }
+
+/* color palette and text image*/
+
+.palette {
+  min-width: 30rem;
+  padding: 2rem 4rem;
+}
+
+.maintext{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: flex-start;
+  padding: 10px;
+  min-width:30rem;
+}
+
+.roboto img{
+    padding: 2rem 4rem;
+}
+
+.box{
+    width: 30%
+}
+
+.logoimg{
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.l1 img, .l2 img, .l3 img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  height: auto;
+  width: 100%;
+}
+
+.l2 img, .l3 img {
+  height: auto;
+  width: 30rem;
+}
+
+/*preference testing*/
+
+.preference{
+  padding: 0;
+}
+
+.row1, .row2, .row3{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  height: auto;
+}
+
+.img1a img, .img1b img, .img2a img, .img2b img{
+  height: auto;
+  padding: 1rem 0;
+  width: 32rem;
+}
+
+.img3a img, .img3b img{
+  width: 15rem;
+  height: auto;
+  padding: 1rem 0;
+}
+
+.threephone img{
+  margin: 5px auto;
+}
+
+/*high fidelity prototyping*/
+
+.s1 img, .s2 img, .s3 img, .s4 img, .s5 img, .s6 img{
+  height: 39rem;
+  padding: 0 2rem;
+}
+
+.srow1{
+  padding-right: 0px;
+}
+
+.srow2{
+  padding-left: 0px;
+}
+
+  #firstframe{
+    padding: 2rem;
+    height:600px;
+    width:600px;
+    overflow: scroll;
+    scroll-behavior:smooth;
+    overflow-y: hidden;
+  }
+
+  #secondframe{
+    height:500px;
+    width:auto;
+    overflow:auto;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+.herotop{
+  font-size:45px;
+  height:10.3rem;
+  width:auto;
+  padding-left:0;
+}
 
 }

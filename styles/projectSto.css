@@ -16,25 +16,19 @@ body {
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
-}
 
-section {
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  height: auto;
-  width: 100%;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-}
-
+/*project purple = #590E56*/
 /*font specs*/
-a{
-  color: #590E56;
+a:link, a:visited{
+  color: black;
+  text-decoration: none;
 }
+
+a:hover{
+  color: #FED180;
+  text-decoration: none;
+}
+
 
 p{
   font-family: 'Roboto', sans-serif;
@@ -140,6 +134,10 @@ bodycopy{
 }
 
 button {
+  all: unset;
+}
+
+button a:link, a:visited{
   background-color: rgba(254, 209, 128, 60%);
   border: none;
   color: black;
@@ -152,6 +150,21 @@ button {
   width: 240px;
   letter-spacing: .2rem;
 }
+
+button a:hover{
+  background-color: #590E56;
+  border: none;
+  color: #FED180;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 24px;
+  font-family: 'PT Sans', sans-serif;
+  width: 240px;
+  letter-spacing: .2rem;
+}
+
 
 /*navbar container*/
 
@@ -376,7 +389,6 @@ li.next {
   flex-grow:20;
 }
 
-
 /*persona seciton*/
 
 .persona-cont {
@@ -523,6 +535,42 @@ li.next {
   display: flex;
   flex-grow: 1;
   width: 40rem;
+}
+
+.flow1, .flow2 {
+  max-width: 40%;
+}
+
+  /** LIGHTBOX MARKUP **/
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
 }
 
 /*images of "creating new file" screens*/
@@ -867,16 +915,7 @@ li.mail, li.github, li.linkedin{
   }
 
   /*all the flex containers common element. 800px for desktop version*/
-  .content {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-    justify-content: center;
-    text-align:left;
-    width: 80%;
-  }
+
 
   /*container that is width 100%*/
   .contentfull {
