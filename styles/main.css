@@ -1648,7 +1648,7 @@ li.next {
   #firstframe{
     padding: 2rem;
     height:600px;
-    width:600px;
+    width:100vw;
     overflow: scroll;
     overflow-y: hidden;
   }
