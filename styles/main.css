@@ -1341,7 +1341,7 @@ li.next {
 }
 
   .pcontent{
-    width:80%;
+    width:100vw;
     align-items: center;
     justify-content: center;
     align-content: center;
