@@ -100,14 +100,27 @@ b{
 }
 
 .smalltitle{
-  padding:5rem 0;
+  width:100%;
+  padding-top:8%;
+  padding-bottom:2%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .captions{
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
-  letter-spacing: .2rem;/* 0.1rem in project page*/
+  letter-spacing: .1rem;/* 0.1rem in project page*/
   line-height: 200%;/*150% in project page*/
+  text-align:left;
+}
+
+.fig{
+  font-family: 'Josefin sans', sans-serif;
+  padding-left:2rem;
+  font-style: italic;
+  letter-spacing: 0px;
 }
 
 /*all the flex containers common element. 800px for desktop version*/
@@ -158,6 +171,12 @@ section {
   text-align: center;
 }
 
+.textblock{
+  margin:5px;
+  padding:2rem 0;
+}
+
+
 /*button specifications*/
 
 .aroundbutton{
@@ -200,6 +219,8 @@ button a:hover{
 /*navbar specs*/
 
 .flex-container{
+    position:sticky;
+    top:0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -211,6 +232,25 @@ button a:hover{
     justify-content: space-between;
     align-items: center;
     }
+
+/* .head{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.section-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    height: auto;
+    width: 100%;
+    padding: 0 5rem 5rem 5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    } */
 
 
 .logo img{
@@ -351,7 +391,7 @@ li.logo {
   display: flex;
   flex-wrap: wrap;
   flex-direction:row;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: auto;
   width: 100%;
   justify-content: center;
@@ -560,7 +600,8 @@ li.mail, li.github, li.linkedin{
 
 .right img{
   height: auto;
-  width: 19rem;
+  width: 23rem;
+  filter: drop-shadow(0px 3px 9px #B3C1C7);
 }
 
 .prob{
@@ -575,6 +616,25 @@ li.mail, li.github, li.linkedin{
 
 .current{
   text-align: left;
+}
+
+.readmore a:link, a:visited{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+  text-transform:lowercase;
+  border-bottom: 1px solid black;
+  line-height: normal;
+  padding: 0;
+  margin:50px;
+}
+
+.readmore a:hover{
+  color:black;
+  background-color: rgba(254, 209, 128, 60%);
+  border-bottom:none;
 }
 
 /*screen width for images*/
@@ -663,6 +723,13 @@ li.next {
   flex-grow:20;
 }
 
+.prev, .next a:link, a:visited{
+    color: #590E56;
+}
+
+.yellowarrow a:hover{
+  color: #FED150;
+}
 
 /*persona seciton*/
 
@@ -796,20 +863,27 @@ li.next {
 /*user flows section*/
 
 .userflows{
-  align-items: center;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: center;
+  justify-content:center;
+  padding: 5rem 0;
   height: auto;
-  justify-content:space-around;
-  padding: 5rem 10rem;
-  width: 90%;
+  width:100%;
 }
 
 .flow1 img, .flow2 img{
   display: flex;
-  flex-grow: 1;
-  width: 40rem;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+  width: 58rem;
+  margin:2rem;
+  margin-bottom:.5rem;
+  filter: drop-shadow(0px 3px 9px #B3C1C7);
 }
 
 /*images of "creating new file" screens*/
@@ -836,8 +910,8 @@ li.next {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content:space-around;
-  padding-top:5rem;
+  justify-content:flex-start;
+  padding:5rem 0;
 }
 
 /* color palette and text image*/
@@ -861,8 +935,9 @@ li.next {
   padding: 10px 0;
   width:100%;
 }
-
 .roboto img{
+  width:40rem;
+  height: auto;
   padding:0 10px;
 }
 
@@ -923,7 +998,7 @@ li.next {
 
 .preference{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   height: auto;
   justify-content: center;
@@ -934,10 +1009,12 @@ li.next {
 .row1, .row2, .row3{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .img1a img, .img1b img{
+  filter: drop-shadow(0px 3px 9px #B3C1C7);
   align-items: flex-start;
   display: flex;
   flex-direction: row;
@@ -948,19 +1025,23 @@ li.next {
 }
 
 .img2a img, .img2b img{
+  filter: drop-shadow(0px 3px 9px #B3C1C7);
   display: flex;
   height: auto;
   justify-content: center;
   padding: 10px 20px;
   width: 600px;
+  height: auto;
 }
 
 .img3a img, .img3b img{
+  filter: drop-shadow(0px 3px 9px #B3C1C7);
   display: flex;
-  height:100%;
+  flex-direction: row;
+  height:30rem;
+  width:auto;
   justify-content: center;
-  padding: 10px 20px;
-  width: auto;
+  padding: 1rem 2rem;
 }
 
 .threephone{
@@ -1248,8 +1329,6 @@ li.next {
   }
 
 /* STO project page  */
-  .element::-webkit-scrollbar { width: 0 !important }
-
 
   /*navbar*/
 
@@ -1268,6 +1347,20 @@ li.next {
     /*all the flex containers common element. 800px for desktop version*/
   .content {
     width: 80%;
+  }
+
+.sto{
+  width:80%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+  .pcontent{
+    width:80%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
   }
 
   /*container that is width 100%*/
@@ -1362,7 +1455,22 @@ li.next {
     padding: 1rem 2rem;
   }
 
-  /*persona seciton*/
+/*readmore buttons*/
+
+.readmore a:link, a:visited{
+  text-align: center;
+  border-top: 1px solid black;
+  padding:2px 0;
+  background-color: transparent;
+}
+
+.readmore a:hover{
+  background-color: rgba(254, 209, 128, 60%);
+  border-bottom:none;
+  border-top:none;
+}
+
+  /*persona section*/
 
   .persona-cont {
     display: flex;
@@ -1414,7 +1522,7 @@ li.next {
 
   .flow1 img, .flow2 img{
     width: 33rem;
-    padding: 5rem 0;
+    padding: 5rem 2rem;
   }
 
 
@@ -1494,6 +1602,7 @@ li.next {
   align-items: center;
   padding: 2rem 0;
   height: auto;
+  width:100%;
 }
 
 .img1a img, .img1b img, .img2a img, .img2b img{
