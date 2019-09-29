@@ -77,12 +77,6 @@ b{
   padding-top: 6rem;
 }
 
-.maincontent{
-  font-size: 1.6rem;
-  line-height: 3rem;
-}
-
-
 /*subtitle text*/
 .subtitle{
   font-family: 'Josefin Sans', sans-serif;
@@ -551,8 +545,9 @@ li.mail, li.github, li.linkedin{
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
+  width:100%;
 }
 
 .stoTitlep {
@@ -563,7 +558,6 @@ li.mail, li.github, li.linkedin{
 
 .stoContentp{
   width:600px;
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.8rem;
   line-height: 2rem;
 }
@@ -620,12 +614,13 @@ li.mail, li.github, li.linkedin{
 
 .readmore a:link, a:visited{
   display:flex;
+  color: #590E56;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-decoration: none;
   text-transform:lowercase;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #FED150;
   line-height: normal;
   padding: 0;
   margin:50px;
@@ -661,6 +656,7 @@ li.mail, li.github, li.linkedin{
   flex: 1;
   padding: 3rem;
   align-items: center;
+  text-align: center;
 }
 
 
@@ -723,13 +719,14 @@ li.next {
   flex-grow:20;
 }
 
-.prev, .next a:link, a:visited{
+.prev a:link, a:visited, .next a:link, a:visited{
     color: #590E56;
 }
 
-.yellowarrow a:hover{
-  color: #FED150;
+.prev a:hover, .next a:hover{
+    background-color: rgba(254, 209, 128, 60%);
 }
+
 
 /*persona seciton*/
 
@@ -1384,6 +1381,14 @@ li.next {
     font-size: 3.5rem;
   }
 
+
+  .stoContentp{
+    width:80%;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+
   .viewcasestudy{
     padding: 8rem;
     padding-top:2rem;
@@ -1437,12 +1442,25 @@ li.next {
   .content-img{
     flex-direction: column;
     flex-basis: 100%;
-    width: 100%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .ui, .account, .thumbsup, .ninefive,
   .back, .comp, .hand, .plus{
+    display: flex;
     flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width:600px;
   }
 
   /* next and previous project bar*/
@@ -1455,11 +1473,15 @@ li.next {
     padding: 1rem 2rem;
   }
 
+  .colorbk{
+    padding:5rem 2rem;
+  }
+
 /*readmore buttons*/
 
 .readmore a:link, a:visited{
   text-align: center;
-  border-top: 1px solid black;
+  border-top: 1px solid #FED150;
   padding:2px 0;
   background-color: transparent;
 }
@@ -1532,7 +1554,7 @@ li.next {
     flex-wrap: wrap;
     flex-direction: column;
     height: auto;
-    width: 100%;
+    width:100%;
     padding:2rem 0;
     justify-content:space-around;
   }
@@ -1641,7 +1663,6 @@ li.next {
     height:600px;
     width:600px;
     overflow: scroll;
-    scroll-behavior:smooth;
     overflow-y: hidden;
   }
 
