@@ -588,6 +588,8 @@ li.mail, li.github, li.linkedin{
 
 /*color background sections*/
 .colorbk{
+  width:100%;
+  height:auto;
   background-color: rgba(205, 169, 160, 40%);
   padding:5rem 0;
 }
