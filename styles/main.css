@@ -1335,14 +1335,14 @@ a:hover{
   }
 
 .sto{
-  width:80%;
+  width:100%;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
 
   .pcontent{
-    width:100vw;
+    width:80%;
     align-items: center;
     justify-content: center;
     align-content: center;
