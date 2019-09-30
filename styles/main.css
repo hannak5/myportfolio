@@ -271,14 +271,14 @@ li.logo {
 
 .herotop{
   width:100%;
-  text-align: left;
+  text-align: center;
   font-weight: 500;
   font-size: 9rem;
   color: #9B6E9A;
   position: relative;
   z-index: 2;
-  justify-content: left;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .herotext{
