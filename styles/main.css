@@ -8,7 +8,7 @@ html{
 
 body {
   background-color: white;
-  width: 100vw;
+  width: 100%;
 }
 
 .container{
@@ -1394,11 +1394,15 @@ a:hover{
     padding-top: 0px;
     padding:0 10%;
     text-align:center;
+    justify-content:flex-start;
+    align-items:flex-start;
   }
 
   .design, .deliv , .tools{
     display:flex;
     flex-direction: column;
+    justify-content:flex-start;
+    align-items:flex-start;
     padding:2rem 0;
   }
 
