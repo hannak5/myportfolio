@@ -1398,7 +1398,7 @@ a:hover{
   .design, .deliv , .tools{
     display:flex;
     flex-direction: column;
-    padding:2rem 0;
+    padding:2rem;
   }
 
   /*problem solution section*/
