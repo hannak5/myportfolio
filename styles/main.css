@@ -887,7 +887,7 @@ a:hover{
   display: flex;
   flex-grow: 1;
   flex-direction: row;
-  height: 35rem;
+  height: 32rem;
   width: auto;
   padding:0 1rem;
 }
