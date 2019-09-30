@@ -1083,6 +1083,12 @@ a:hover{
 }
 
 
+#thirdframe{
+  height: auto;
+  width: auto;
+  overflow:auto;
+}
+
 
 @media screen and (max-width: 992px) {
 
@@ -1662,6 +1668,14 @@ a:hover{
     overflow: scroll;
     overflow-y: hidden;
   }
+
+  #thirdframe{
+  padding: 2rem;
+  height:600px;
+  width:90vw;
+  overflow: scroll;
+  overflow-y: hidden;
+}
 
   #secondframe{
     height:500px;
