@@ -1071,7 +1071,7 @@ a:hover{
 
 #secondframe{
   height:auto;
-  width:auto;
+  width:100%;
   overflow:auto;
 }
 
