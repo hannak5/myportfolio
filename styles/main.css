@@ -24,12 +24,10 @@ body {
 
 a:link, a:visited{
   color: black;
-  text-decoration: none;
 }
 
 a:hover{
   color: #FED180;
-  text-decoration: none;
 }
 
 p{
@@ -150,7 +148,7 @@ b{
   height: auto;
   justify-content: center;
   text-align:left;
-  width:100%;
+  width:100vw;
 }
 
 section {
@@ -178,11 +176,7 @@ section {
   padding-bottom:8rem;
 }
 
-button {
-  all: unset;
-}
-
-button a:link, a:visited{
+a.button:link , a.button:visited {
   background-color: rgba(254, 209, 128, 60%);
   border: none;
   color: black;
@@ -190,13 +184,15 @@ button a:link, a:visited{
   text-align: center;
   display: inline-block;
   font-size: 1.6rem;
+  font-weight: 200;
   border-radius: 24px;
   font-family: 'PT Sans', sans-serif;
   width: 240px;
   letter-spacing: .2rem;
+  text-decoration: none;
 }
 
-button a:hover{
+a.button:hover {
   background-color: #590E56;
   border: none;
   color: #FED180;
@@ -218,7 +214,7 @@ button a:hover{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 2.4rem;
     height: auto;
     width: 100%;
@@ -260,33 +256,38 @@ li.logo {
 
 /* hero section */
 
+
 .hero {
-    height:100vh;
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+  }
+
+.herotop, .herobottom{
+      display:flex;
+      flex-direction: column;
 }
 
 .herotop{
-  height: 6.5rem;
-  padding-top:2rem;
-  padding-left:5rem;
-  justify-content: left;
+  width:100%;
   text-align: left;
+  font-weight: 500;
+  font-size: 9rem;
+  color: #9B6E9A;
+  position: relative;
+  z-index: 2;
+  justify-content: left;
   align-items: flex-start;
 }
 
 .herotext{
-  font-weight: 500;
-  font-size: 9rem;
-  color: #9B6E9A;
-  text-align: left;
-  position: relative;
-  z-index: 2;
+  width:100%;
+  padding-left:10%;
 }
-
 .yellow{
   color: #FED150;
   text-align: left;
-  position: relative;
-  z-index: 2;
 }
 
 .herobottom{
@@ -296,7 +297,9 @@ li.logo {
   padding:5% 0;
   padding-left:20%;
   padding-right:20%;
+  text-align:center;
   justify-content: center;
+  align-items: center;
   line-height: 5rem;
   font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
@@ -470,7 +473,7 @@ li.mail, li.github, li.linkedin{
 .ques{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 3.5rem;
-  line-height: 3rem;
+  line-height: 4rem;
 }
 
 .ans{
@@ -598,7 +601,7 @@ li.mail, li.github, li.linkedin{
   text-align: left;
 }
 
-.readmore a:link, a:visited{
+.readmore{
   display:flex;
   color: #590E56;
   justify-content: center;
@@ -606,13 +609,15 @@ li.mail, li.github, li.linkedin{
   align-content: center;
   text-decoration: none;
   text-transform:lowercase;
+  background-color: none;
+  border-radius: 0;
   border-bottom: 1px solid #FED150;
   line-height: normal;
   padding: 0;
   margin:50px;
 }
 
-.readmore a:hover{
+.readmore > a:hover{
   color:black;
   background-color: rgba(254, 209, 128, 60%);
   border-bottom:none;
@@ -705,17 +710,14 @@ li.next {
   flex-grow:20;
 }
 
-.prev a:link, a:visited{
-    color: #590E56;
+a:visited , a:link{
+        color: #590E56;
+        text-decoration: none;
 }
 
-.next a:link, a:visited{
-    color: #590E56;
+a:hover{
+  color: #FED150;
 }
-.prev a:hover, .next a:hover{
-    background-color: rgba(254, 209, 128, 60%);
-}
-
 
 /*persona seciton*/
 
@@ -1124,32 +1126,29 @@ li.next {
 
   /*Hero section*/
 
+  .hero {
+      height:100%;
+      display:flex;
+      flex-direction: row;
+  }
+
+
   .herotop{
-    max-width:450px;
-    height:100px ;
-    padding-top:3rem;
-    padding-left:10%;
+    width:30rem;
+    font-weight: 400;
+    font-size: 4.5rem;
+    padding:0;
+    text-align: center;
+    justify-content: left;
+    align-items: left;
   }
 
   .herobottom{
-    padding-top:5%;
-    padding-left:10%;
-    padding-right:10%;
-    line-height: 3rem;
-    font-size: 1.6rem;
-    font-weight: 300;
-  }
-
-  .herotext{
-    font-size: 5rem;
-    text-align: left;
-    color: #9B6E9A;
-    padding:0 3rem;
-    padding-bottom: 0rem;
-  }
-
-  .hero{
-    height:100vh;
+    height:100%;
+    background-color: #9B6E9A;
+    padding:10% 20%;
+    line-height: 4rem;
+    font-size: 1.8rem;
   }
 
   .arrow img{
@@ -1224,8 +1223,8 @@ li.next {
 /*about me page*/
 
   .content {
-    width: 100%;
-    padding:0 10%;
+    width: 100vw;
+    padding:0 3%;
   }
 
   .aboutsummary{
@@ -1272,7 +1271,7 @@ li.next {
   .ques{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3.5rem;
-    line-height: 3rem;
+    line-height: 4rem;
   }
 
   /*body copy big*/
@@ -1332,7 +1331,7 @@ li.next {
 
     /*all the flex containers common element. 800px for desktop version*/
   .content {
-    width: 80%;
+    width: 80vw;
   }
 
 .sto{
@@ -1383,11 +1382,11 @@ li.next {
     padding-top:2rem;
   }
 
-  button a:link, a:visited{
+  a:link.button a:visited.button{
     font-size: 1.4rem;
   }
 
-  button a:hover{
+  a:hover.button{
     font-size: 1.4rem;
   }
 
@@ -1468,14 +1467,14 @@ li.next {
 
 /*readmore buttons*/
 
-.readmore a:link, a:visited{
+.readmore{
   text-align: center;
   border-top: 1px solid #FED150;
   padding:2px 0;
   background-color: transparent;
 }
 
-.readmore a:hover{
+.readmore > a:hover{
   background-color: rgba(254, 209, 128, 60%);
   border-bottom:none;
   border-top:none;
@@ -1556,6 +1555,10 @@ li.next {
   }
 
 /* color palette and text image*/
+
+.brandingimg{
+  justify-content:center;
+}
 
 .palette {
   min-width: 30rem;
@@ -1650,7 +1653,7 @@ li.next {
   #firstframe{
     padding: 2rem;
     height:600px;
-    width:100vw;
+    width:90vw;
     overflow: scroll;
     overflow-y: hidden;
   }
@@ -1663,14 +1666,28 @@ li.next {
     overflow-y: hidden;
   }
 
+  .contentfull{
+    padding:0;
+    width:100vw;
+  }
+
+  .designer{
+    display:flex;
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+
+  #myframe{
+    height:300px;
+    width:100vw;
+    overflow:hidden;
+  }
+
 }
 
 @media screen and (max-width: 320px){
 .herotop{
-  font-size:45px;
-  height:10.3rem;
-  width:auto;
-  padding-left:0;
+
 }
 
 }
