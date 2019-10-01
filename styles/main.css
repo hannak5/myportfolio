@@ -554,6 +554,7 @@ li.mail, li.github, li.linkedin{
   justify-content: space-between;
   text-align:center;
   padding: 6rem 0;
+  width:600px;
 }
 
 .design, .delv, .tools{
@@ -1402,6 +1403,7 @@ a:hover{
     text-align:center;
     justify-content:center;
     align-items:center;
+    width:auto;
   }
 
   .design, .deliv , .tools{
