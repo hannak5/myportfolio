@@ -283,8 +283,9 @@ li.logo {
 
 .herotext{
   width:100%;
-  padding-left:10%;
+  padding-left:0px;
 }
+
 .yellow{
   color: #FED150;
   text-align: left;
