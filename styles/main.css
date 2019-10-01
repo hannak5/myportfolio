@@ -136,7 +136,7 @@ b{
   height: auto;
   justify-content: center;
   text-align:left;
-  width: 85%;
+  max-width: 800px;
 }
 
 /*container that is width 100%*/
