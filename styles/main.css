@@ -554,7 +554,7 @@ li.mail, li.github, li.linkedin{
   justify-content: space-between;
   text-align:center;
   padding: 6rem 0;
-  width:600px;
+  max-width:750px;
 }
 
 .design, .delv, .tools{
