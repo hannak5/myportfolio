@@ -1689,6 +1689,15 @@ a:hover{
     overflow-y: hidden;
   }
 
+  
+  #firstframe1{
+    padding: 2rem;
+    height:600px;
+    width:80vw;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+  
   #thirdframe{
   padding: 2rem;
   height:600px;
