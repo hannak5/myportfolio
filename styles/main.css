@@ -877,6 +877,18 @@ a:hover{
   filter: drop-shadow(0px 3px 9px #B3C1C7);
 }
 
+.sketch{
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.sketch img{
+  height: 45rem;
+  width: auto;
+  padding: 0rem 2rem;
+}
+
 /*images of "creating new file" screens*/
 .createnewfile{
   display: flex;
@@ -1647,6 +1659,10 @@ a:hover{
 }
 
 .threephone img{
+  margin: 5px auto;
+}
+  
+.sketch img{
   margin: 5px auto;
 }
 
