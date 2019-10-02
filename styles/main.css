@@ -8,7 +8,7 @@ html{
 
 body {
   background-color: white;
-  width: 100vw;
+  width: 100%;
 }
 
 .container{
@@ -152,7 +152,6 @@ b{
 }
 
 section {
-  margin: auto;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -171,12 +170,9 @@ section {
 
 /*button specifications*/
 
-.aroundbutton{
-  padding-top: 5rem;
-  padding-bottom:8rem;
-}
 
 a.button:link , a.button:visited {
+  margin: 4rem 2rem 10rem 2rem;
   background-color: rgba(254, 209, 128, 60%);
   border: none;
   color: black;
@@ -222,6 +218,9 @@ a.button:hover {
     justify-content: space-between;
     align-items: center;
     }
+
+
+
 
 /* .head{
     position: sticky;
@@ -466,7 +465,7 @@ li.mail, li.github, li.linkedin{
 }
 
 .seemywork{
-  margin: 5rem auto;
+
 }
 
 .quesbox, .ansbox{
@@ -509,16 +508,12 @@ li.mail, li.github, li.linkedin{
 .interest{
   justify-content: center;
   padding: 6rem;
-  padding-bottom:4rem;
+  padding-bottom:0;
   font-size: 3.5rem;
   letter-spacing: normal;
   font-weight: 300;
 }
 
-.getintouch{
-  padding:10rem 8rem;
-  padding-top:0;
-}
 
 /* STO project page details */
 
@@ -575,6 +570,7 @@ li.mail, li.github, li.linkedin{
 .design, .delv, .tools{
   min-width: 19rem;
 }
+
 /*problem solution section*/
 
 .problemsolution{
@@ -1090,7 +1086,7 @@ a:hover{
 }
 
 
-#firstframe{
+#firstframe, #thirdframe{
   height: auto;
   width: auto;
   overflow:auto;
@@ -1124,19 +1120,6 @@ a:hover{
       padding-bottom: 3rem;
       justify-content: center;
     }
-
-    section {
-      margin: auto;
-      width: 100%;
-      overflow: hidden;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
 
   /*Hero section*/
 
@@ -1237,6 +1220,8 @@ a:hover{
 /*about me page*/
 
   .content {
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     padding:0 3%;
   }
@@ -1322,10 +1307,23 @@ a:hover{
     line-height: 4rem;
   }
 
-  .getintouch{
-    padding:10rem 8rem;
+
+  .connectbutton {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+  }
+
+  .getintouch, .downloadresume{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     padding-top:0;
   }
+
 
 /* STO project page  */
 
@@ -1345,18 +1343,22 @@ a:hover{
 
     /*all the flex containers common element. 800px for desktop version*/
   .content {
-    width: 80vw;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
   }
 
 .sto{
-  width:80%;
+  width:100%;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
 
   .pcontent{
-    width:80%;
+    width:75%;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -1664,7 +1666,7 @@ a:hover{
   padding-left: 0px;
 }
 
-  #firstframe{
+  #firstframe, #thirdframe{
     padding: 2rem;
     height:600px;
     width:90vw;
@@ -1682,7 +1684,7 @@ a:hover{
 
   .contentfull{
     padding:0;
-    width:100vw;
+    width:100%;
   }
 
   .designer{
@@ -1693,7 +1695,7 @@ a:hover{
 
   #myframe{
     height:300px;
-    width:100vw;
+    width:100%;
     overflow:hidden;
   }
 
