@@ -1097,6 +1097,13 @@ a:hover{
   overflow:auto;
 }
 
+#firstframe1{
+  height: auto;
+  width: auto;
+  overflow:auto;
+}
+
+
 
 #thirdframe{
   height: auto;
@@ -1693,7 +1700,7 @@ a:hover{
   #firstframe1{
     padding: 2rem;
     height:600px;
-    width:80vw;
+    width:90vw;
     overflow: scroll;
     overflow-y: hidden;
   }
